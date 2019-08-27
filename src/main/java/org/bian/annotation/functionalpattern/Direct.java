@@ -52,6 +52,12 @@ public @interface Direct {
 // ***** Control Record Invocation *****
 
 	/**
+	 * The Interface Update.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Update @interface Update {}
+
+	/**
 	 * The Interface Exchange.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
