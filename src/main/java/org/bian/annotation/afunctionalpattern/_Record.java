@@ -1,4 +1,4 @@
-package org.bian.annotation.functionalpattern;
+package org.bian.annotation.afunctionalpattern;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Interface _Authorize.
+ * The Interface _Record.
  */
 @Target({ ElementType.METHOD, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 @RequestMapping(method = RequestMethod.POST)
-@interface _Authorize {
+@interface _Record {
 	
 	/**
 	 * Path.
@@ -25,6 +25,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 	 */
 	@AliasFor(annotation = RequestMapping.class)
 	String[] path() default {
-		"${control-record}/authorization",
-		"${control-record}/{cr-reference-id}/{behavioral-qualifier}/authorization" };
+		"${control-record}/{cr-reference-id}/recording",
+		"${control-record}/{cr-reference-id}/{behavioral-qualifier}/{bq-reference-id}/recording" };
 }

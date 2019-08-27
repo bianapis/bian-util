@@ -14,11 +14,12 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Track {
+
+// ***** SD Operation *****
 	
 	/**
 	 * The Interface Activate.
 	 */
-	// Origination ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Activate @interface Activate {}
 
@@ -27,40 +28,69 @@ public @interface Track {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Configure @interface Configure {}
-	// ---
+	
+	/**
+	 * The Interface Feedback.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Feedback @interface Feedback {}
+	
+// ***** ----- *****
+
+	
+// ***** Control Record Instantiation *****
+
+	/**
+	 * The Interface Initiate.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Initiate @interface Initiate {}
+
+// ***** ----- *****
+
+
+// ***** Control Record Invocation *****
 
 	/**
 	 * The Interface Update.
 	 */
-	// Invocation ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Update @interface Update {}
 	
 	/**
-	 * The Interface Record.
+	 * The Interface Control.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_Record @interface Record {}
-
+	@_Control @interface Control {}
+	
 	/**
-	 * The Interface Terminate.
+	 * The Interface Capture.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_Terminate @interface Terminate {}
-	// ---
+	@_Capture @interface Capture {}
 
+// ***** ----- *****
+
+	
+// ***** Reporting *****
+	
 	/**
 	 * The Interface Notify.
 	 */
-	// Reporting ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Notify @interface Notify {}
-	
+
 	/**
 	 * The Interface Retrieve.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Retrieve @interface Retrieve {}
+
+	/**
+	 * The Interface RetrieveSD.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_RetrieveSD @interface RetrieveSD {}
 	
 	/**
 	 * The Interface RetrieveRefIds.
@@ -79,6 +109,7 @@ public @interface Track {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_RetrieveBQIds @interface RetrieveBQIds {}
-	// ---
+	
+// ***** ----- *****
 	
 }

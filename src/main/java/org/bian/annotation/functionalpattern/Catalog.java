@@ -8,26 +8,15 @@ import java.lang.annotation.Target;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Interface Template.
+ * The Interface Catalog.
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface Template {
+public @interface Catalog {
+
+// ***** SD Operation *****
 	
-	/**
-	 * The Interface Initiate.
-	 */
-	// Origination ---
-	@Retention(RetentionPolicy.RUNTIME)
-	@_Initiate @interface Initiate {}
-
-	/**
-	 * The Interface Create.
-	 */
-	@Retention(RetentionPolicy.RUNTIME)
-	@_Create @interface Create {}
-
 	/**
 	 * The Interface Activate.
 	 */
@@ -39,80 +28,67 @@ public @interface Template {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Configure @interface Configure {}
-	// ---
-
-	/**
-	 * The Interface Update.
-	 */
-	// Invocation ---
-	@Retention(RetentionPolicy.RUNTIME)
-	@_Update @interface Update {}
 	
+	/**
+	 * The Interface Feedback.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Feedback @interface Feedback {}
+	
+// ***** ----- *****
+
+	
+// ***** Control Record Instantiation *****
+
 	/**
 	 * The Interface Register.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Register @interface Register {}
 
-	/**
-	 * The Interface Record.
-	 */
-	@Retention(RetentionPolicy.RUNTIME)
-	@_Record @interface Record {}
+// ***** ----- *****
+
+
+// ***** Control Record Invocation *****
 
 	/**
-	 * The Interface ExecutePost.
+	 * The Interface Update.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_ExecutePost @interface ExecutePost {}
-
+	@_Update @interface Update {}
+	
 	/**
-	 * The Interface ExecutePut.
+	 * The Interface Control.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_ExecutePut @interface ExecutePut {}
-
+	@_Control @interface Control {}
+	
 	/**
-	 * The Interface Evaluate.
+	 * The Interface Exchange.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_Evaluate @interface Evaluate {}
-
+	@_Exchange @interface Exchange {}
+	
 	/**
-	 * The Interface Provide.
+	 * The Interface Execute.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_Provide @interface Provide {}
-
+	@_Execute @interface Execute {}
+	
 	/**
-	 * The Interface Authorize.
+	 * The Interface Request.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_Authorize @interface Authorize {}
+	@_Request @interface Request {}
 
-	/**
-	 * The Interface RequestPost.
-	 */
-	@Retention(RetentionPolicy.RUNTIME)
-	@_RequestPost @interface RequestPost {}
+// ***** ----- *****
 
-	/**
-	 * The Interface RequestPut.
-	 */
-	@Retention(RetentionPolicy.RUNTIME)
-	@_RequestPut @interface RequestPut {}
-
-	/**
-	 * The Interface Terminate.
-	 */
-	@Retention(RetentionPolicy.RUNTIME)
-	@_Terminate @interface Terminate {}
-	// ---
-
+	
+// ***** Reporting *****
+	
 	/**
 	 * The Interface Notify.
 	 */
-	// Reporting ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Notify @interface Notify {}
 
@@ -121,6 +97,12 @@ public @interface Template {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Retrieve @interface Retrieve {}
+
+	/**
+	 * The Interface RetrieveSD.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_RetrieveSD @interface RetrieveSD {}
 	
 	/**
 	 * The Interface RetrieveRefIds.
@@ -139,6 +121,7 @@ public @interface Template {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_RetrieveBQIds @interface RetrieveBQIds {}
-	// ---
+	
+// ***** ----- *****
 	
 }

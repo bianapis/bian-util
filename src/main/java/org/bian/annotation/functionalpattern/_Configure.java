@@ -24,5 +24,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 	 * @return the string[]
 	 */
 	@AliasFor(annotation = RequestMapping.class)
-	String[] path() default "configuration";
+	String[] path() default {
+		"{sd-reference-id}/configuration" };
 }

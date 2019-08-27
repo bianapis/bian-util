@@ -14,11 +14,12 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Allocate {
+
+// ***** SD Operation *****
 	
 	/**
 	 * The Interface Activate.
 	 */
-	// Origination ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Activate @interface Activate {}
 
@@ -27,40 +28,75 @@ public @interface Allocate {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Configure @interface Configure {}
-	// ---
-
+	
 	/**
-	 * The Interface Update.
-	 */
-	// Invocation ---
-	@Retention(RetentionPolicy.RUNTIME)
-	@_Update @interface Update {}
-
-	/**
-	 * The Interface Record.
+	 * The Interface Feedback.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_Record @interface Record {}
+	@_Feedback @interface Feedback {}
+	
+// ***** ----- *****
+
+	
+// ***** Control Record Instantiation *****
 
 	/**
 	 * The Interface Provide.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Provide @interface Provide {}
-	// ---
 
+// ***** ----- *****
+
+
+// ***** Control Record Invocation *****
+
+	/**
+	 * The Interface Update.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Update @interface Update {}
+	
+	/**
+	 * The Interface Control.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Control @interface Control {}
+	
+	/**
+	 * The Interface Exchange.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Exchange @interface Exchange {}
+	
+	/**
+	 * The Interface Capture.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Capture @interface Capture {}
+
+// ***** ----- *****
+
+	
+// ***** Reporting *****
+	
 	/**
 	 * The Interface Notify.
 	 */
-	// Reporting ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Notify @interface Notify {}
-	
+
 	/**
 	 * The Interface Retrieve.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Retrieve @interface Retrieve {}
+
+	/**
+	 * The Interface RetrieveSD.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_RetrieveSD @interface RetrieveSD {}
 	
 	/**
 	 * The Interface RetrieveRefIds.
@@ -79,6 +115,7 @@ public @interface Allocate {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_RetrieveBQIds @interface RetrieveBQIds {}
-	// ---
+	
+// ***** ----- *****
 	
 }

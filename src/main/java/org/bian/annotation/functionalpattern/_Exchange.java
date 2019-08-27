@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Interface _Terminate.
+ * The Interface _Exchange.
  */
 @Target({ ElementType.METHOD, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
-@RequestMapping(method = RequestMethod.DELETE)
-@interface _Terminate {
+@RequestMapping(method = RequestMethod.PUT)
+@interface _Exchange {
 	
 	/**
 	 * Path.
@@ -25,6 +25,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 	 */
 	@AliasFor(annotation = RequestMapping.class)
 	String[] path() default {
-		"${control-record}/{cr-reference-id}",
-		"${control-record}/{cr-reference-id}/{behavioral-qualifier}/{bq-reference-id}" };
+		"{sd-reference-id}/${control-record}/{cr-reference-id}/exchange",
+		"{sd-reference-id}/${control-record}/{cr-reference-id}/{behavioral-qualifier}/{bq-reference-id}/exchange" };
 }

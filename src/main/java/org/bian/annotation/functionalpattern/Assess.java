@@ -14,11 +14,12 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Assess {
+
+// ***** SD Operation *****
 	
 	/**
 	 * The Interface Activate.
 	 */
-	// Origination ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Activate @interface Activate {}
 
@@ -27,14 +28,17 @@ public @interface Assess {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Configure @interface Configure {}
-	// ---
-
+	
 	/**
-	 * The Interface Record.
+	 * The Interface Feedback.
 	 */
-	// Invocation ---
 	@Retention(RetentionPolicy.RUNTIME)
-	@_Record @interface Record {}
+	@_Feedback @interface Feedback {}
+	
+// ***** ----- *****
+
+	
+// ***** Control Record Instantiation *****
 
 	/**
 	 * The Interface Evaluate.
@@ -42,30 +46,57 @@ public @interface Assess {
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Evaluate @interface Evaluate {}
 
-	/**
-	 * The Interface Authorize.
-	 */
-	@Retention(RetentionPolicy.RUNTIME)
-	@_Authorize @interface Authorize {}
+// ***** ----- *****
 
-	/**
-	 * The Interface RequestPost.
-	 */
-	@Retention(RetentionPolicy.RUNTIME)
-	@_RequestPost @interface RequestPost {}
 
+// ***** Control Record Invocation *****
+	
 	/**
-	 * The Interface RequestPut.
+	 * The Interface Exchange.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_RequestPut @interface RequestPut {}
+	@_Exchange @interface Exchange {}
+	
+	/**
+	 * The Interface Execute.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Execute @interface Execute {}
+	
+	/**
+	 * The Interface Request.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Request @interface Request {}
+	
+	/**
+	 * The Interface Grant.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Grant @interface Grant {}
+
+// ***** ----- *****
+
+	
+// ***** Reporting *****
+	
+	/**
+	 * The Interface Notify.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Notify @interface Notify {}
 
 	/**
 	 * The Interface Retrieve.
 	 */
-	// Reporting ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Retrieve @interface Retrieve {}
+
+	/**
+	 * The Interface RetrieveSD.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_RetrieveSD @interface RetrieveSD {}
 	
 	/**
 	 * The Interface RetrieveRefIds.
@@ -84,6 +115,7 @@ public @interface Assess {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_RetrieveBQIds @interface RetrieveBQIds {}
-	// ---
+	
+// ***** ----- *****
 	
 }
