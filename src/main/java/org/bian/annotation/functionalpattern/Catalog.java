@@ -41,6 +41,12 @@ public @interface Catalog {
 // ***** Control Record Instantiation *****
 
 	/**
+	 * The Interface Initiate.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Initiate @interface Initiate {}
+
+	/**
 	 * The Interface Register.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)

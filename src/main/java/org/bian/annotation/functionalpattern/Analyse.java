@@ -50,6 +50,18 @@ public @interface Analyse {
 
 
 // ***** Control Record Invocation *****
+
+	/**
+	 * The Interface Update.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Update @interface Update {}
+	
+	/**
+	 * The Interface Exchange.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Exchange @interface Exchange {}
 	
 	/**
 	 * The Interface Execute.

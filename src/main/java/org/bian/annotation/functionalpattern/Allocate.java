@@ -41,6 +41,12 @@ public @interface Allocate {
 // ***** Control Record Instantiation *****
 
 	/**
+	 * The Interface Initiate.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Initiate @interface Initiate {}
+
+	/**
 	 * The Interface Provide.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
@@ -74,6 +80,18 @@ public @interface Allocate {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Capture @interface Capture {}
+	
+	/**
+	 * The Interface Request.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Request @interface Request {}
+	
+	/**
+	 * The Interface Grant.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Grant @interface Grant {}
 
 // ***** ----- *****
 

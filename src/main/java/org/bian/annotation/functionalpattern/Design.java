@@ -76,6 +76,12 @@ public @interface Design {
 	@_Capture @interface Capture {}
 	
 	/**
+	 * The Interface Execute.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Execute @interface Execute {}
+	
+	/**
 	 * The Interface Request.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
