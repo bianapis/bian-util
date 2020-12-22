@@ -111,5 +111,26 @@ public @interface Track {
 	@_RetrieveBQIds @interface RetrieveBQIds {}
 	
 // ***** ----- *****
+// ***** Control Record Invocation *****
+
+	/**
+	 * The Interface Exchange.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Exchange @interface Exchange {}
+
+	/**
+	 * The Interface Grant.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Grant @interface Grant {}
+
+	/**
+	 * The Interface Request.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Request @interface Request {}
+
+	// ***** ----- *****
 	
 }

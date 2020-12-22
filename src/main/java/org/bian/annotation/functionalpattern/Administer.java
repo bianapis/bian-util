@@ -46,6 +46,12 @@ public @interface Administer {
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Create @interface Create {}
 
+	/**
+	 * The Interface Initiate.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Initiate @interface Initiate {}
+
 // ***** ----- *****
 
 

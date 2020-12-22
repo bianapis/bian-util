@@ -46,6 +46,12 @@ public @interface Assess {
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Evaluate @interface Evaluate {}
 
+	/**
+	 * The Interface Initiate.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Initiate @interface Initiate {}
+
 // ***** ----- *****
 
 
@@ -74,6 +80,12 @@ public @interface Assess {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Grant @interface Grant {}
+
+	/**
+	 * The Interface Update.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Update @interface Update {}
 
 // ***** ----- *****
 

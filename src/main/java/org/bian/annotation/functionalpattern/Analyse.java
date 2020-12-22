@@ -46,6 +46,12 @@ public @interface Analyse {
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Evaluate @interface Evaluate {}
 
+	/**
+	 * The Interface Initiate.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Initiate @interface Initiate {}
+
 // ***** ----- *****
 
 

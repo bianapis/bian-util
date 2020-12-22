@@ -121,6 +121,14 @@ public @interface AgreeTerms {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_RetrieveBQIds @interface RetrieveBQIds {}
+
+	// ***** Control Record Instantiation *****
+
+	/**
+	 * The Interface Initiate.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Initiate @interface Initiate {}
 	
 // ***** ----- *****
 	
