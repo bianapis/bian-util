@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Target({ ElementType.METHOD, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 @RequestMapping(method = RequestMethod.PUT)
-@interface _ExecutePut {
+@interface _Execute {
 	
 	/**
 	 * Path.
@@ -25,6 +25,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 	 */
 	@AliasFor(annotation = RequestMapping.class)
 	String[] path() default {
-		"${control-record}/{cr-reference-id}/execution",
-		"${control-record}/{cr-reference-id}/{behavioral-qualifier}/{bq-reference-id}/execution" };
+		"{sd-reference-id}/${control-record}/{cr-reference-id}/execution",
+		"{sd-reference-id}/${control-record}/{cr-reference-id}/{behavioral-qualifier}/{bq-reference-id}/execution" };
 }

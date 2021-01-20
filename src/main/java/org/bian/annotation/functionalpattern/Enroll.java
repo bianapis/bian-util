@@ -14,11 +14,12 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Enroll {
+
+// ***** SD Operation *****
 	
 	/**
 	 * The Interface Activate.
 	 */
-	// Origination ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Activate @interface Activate {}
 
@@ -27,33 +28,81 @@ public @interface Enroll {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Configure @interface Configure {}
-	// ---
+	
+	/**
+	 * The Interface Feedback.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Feedback @interface Feedback {}
+	
+// ***** ----- *****
+
+	
+// ***** Control Record Instantiation *****
+
+	/**
+	 * The Interface Register.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Register @interface Register {}
+
+// ***** ----- *****
+
+
+// ***** Control Record Invocation *****
 
 	/**
 	 * The Interface Update.
 	 */
-	// Invocation ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Update @interface Update {}
-
+	
 	/**
-	 * The Interface RequestPost.
+	 * The Interface Control.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_RequestPost @interface RequestPost {}
-
+	@_Control @interface Control {}
+	
 	/**
-	 * The Interface RequestPut.
+	 * The Interface Exchange.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_RequestPut @interface RequestPut {}
+	@_Exchange @interface Exchange {}
+	
+	/**
+	 * The Interface Request.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Request @interface Request {}
+	
+	/**
+	 * The Interface Grant.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Grant @interface Grant {}
+
+// ***** ----- *****
+
+	
+// ***** Reporting *****
+	
+	/**
+	 * The Interface Notify.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Notify @interface Notify {}
 
 	/**
 	 * The Interface Retrieve.
 	 */
-	// Reporting ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Retrieve @interface Retrieve {}
+
+	/**
+	 * The Interface RetrieveSD.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_RetrieveSD @interface RetrieveSD {}
 	
 	/**
 	 * The Interface RetrieveRefIds.
@@ -72,6 +121,7 @@ public @interface Enroll {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_RetrieveBQIds @interface RetrieveBQIds {}
-	// ---
+	
+// ***** ----- *****
 	
 }

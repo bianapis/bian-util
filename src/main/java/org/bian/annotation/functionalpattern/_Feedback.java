@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Interface _Request.
+ * The Interface _Feedback.
  */
 @Target({ ElementType.METHOD, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
-@RequestMapping(method = RequestMethod.POST)
-@interface _RequestPost {
+@RequestMapping(method = RequestMethod.PUT)
+@interface _Feedback {
 	
 	/**
 	 * Path.
@@ -25,6 +25,5 @@ import org.springframework.web.bind.annotation.RequestMethod;
 	 */
 	@AliasFor(annotation = RequestMapping.class)
 	String[] path() default {
-		"${control-record}/requisition",
-		"${control-record}/{cr-reference-id}/{behavioral-qualifier}/requisition" };
+		"{sd-reference-id}/feedback" };
 }

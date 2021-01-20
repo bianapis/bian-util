@@ -25,5 +25,5 @@ import org.springframework.web.bind.annotation.RequestMethod;
 	 */
 	@AliasFor(annotation = RequestMapping.class)
 	String[] path() default {
-		"${control-record}/{cr-reference-id}/{behavior-qualifier}" };
+		"{sd-reference-id}/${control-record}/{cr-reference-id}/{behavior-qualifier}" };
 }

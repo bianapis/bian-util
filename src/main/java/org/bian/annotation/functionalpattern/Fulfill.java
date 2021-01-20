@@ -15,62 +15,80 @@ import java.lang.annotation.Target;
 @Documented
 public @interface Fulfill {
 
+// ***** SD Operation *****
+	
+	/**
+	 * The Interface Activate.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Activate @interface Activate {}
+
+	/**
+	 * The Interface Configure.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Configure @interface Configure {}
+	
+	/**
+	 * The Interface Feedback.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Feedback @interface Feedback {}
+	
+// ***** ----- *****
+
+	
+// ***** Control Record Instantiation *****
+
 	/**
 	 * The Interface Initiate.
 	 */
-	// Origination ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Initiate @interface Initiate {}
-	// ---
+
+// ***** ----- *****
+
+
+// ***** Control Record Invocation *****
 
 	/**
 	 * The Interface Update.
 	 */
-	// Invocation ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Update @interface Update {}
-
-	/**
-	 * The Interface Record.
-	 */
-	@Retention(RetentionPolicy.RUNTIME)
-	@_Record @interface Record {}
-
-	/**
-	 * The Interface ExecutePost.
-	 */
-	@Retention(RetentionPolicy.RUNTIME)
-	@_ExecutePost @interface ExecutePost {}
-
-	/**
-	 * The Interface ExecutePut.
-	 */
-	@Retention(RetentionPolicy.RUNTIME)
-	@_ExecutePut @interface ExecutePut {}
 	
 	/**
-	 * The Interface RequestPost.
+	 * The Interface Control.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_RequestPost @interface RequestPost {}
-
+	@_Control @interface Control {}
+	
 	/**
-	 * The Interface RequestPut.
+	 * The Interface Exchange.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_RequestPut @interface RequestPut {}
-
+	@_Exchange @interface Exchange {}
+	
 	/**
-	 * The Interface Terminate.
+	 * The Interface Execute.
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
-	@_Terminate @interface Terminate {}
-	// ---
+	@_Execute @interface Execute {}
+	
+	/**
+	 * The Interface Request.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_Request @interface Request {}
 
+// ***** ----- *****
+
+	
+// ***** Reporting *****
+	
 	/**
 	 * The Interface Notify.
 	 */
-	// Reporting ---
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Notify @interface Notify {}
 
@@ -79,6 +97,12 @@ public @interface Fulfill {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_Retrieve @interface Retrieve {}
+
+	/**
+	 * The Interface RetrieveSD.
+	 */
+	@Retention(RetentionPolicy.RUNTIME)
+	@_RetrieveSD @interface RetrieveSD {}
 	
 	/**
 	 * The Interface RetrieveRefIds.
@@ -97,5 +121,7 @@ public @interface Fulfill {
 	 */
 	@Retention(RetentionPolicy.RUNTIME)
 	@_RetrieveBQIds @interface RetrieveBQIds {}
+	
+// ***** ----- *****
 	
 }
